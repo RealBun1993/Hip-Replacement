@@ -2,8 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "api.py",  // 修改为你实际使用的 Flask 文件名
-      "use": "@vercel/python"
+      "src": "api.py",
+      "use": "@vercel/python",
+      "config": { "pythonVersion": "3.9" }  // 或者你的项目实际使用的Python版本
     }
   ],
   "routes": [
@@ -13,3 +14,4 @@
     }
   ]
 }
+
