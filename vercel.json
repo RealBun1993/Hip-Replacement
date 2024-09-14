@@ -10,7 +10,7 @@
   ],
   "build": {
     "env": {
-      "VERCEL_PYTHON_VERSION": "3.12"
+      "VERCEL_PYTHON_VERSION": "3.8"
     },
     "scripts": {
       "build": "pip install --upgrade pip setuptools"
