@@ -1,4 +1,4 @@
 #!/bin/bash
-pip install --upgrade setuptools
-apt-get update
-apt-get install -y python3-distutils
+pip install setuptools==65.5.0 wheel
+pip install --no-cache-dir -r requirements.txt
+
