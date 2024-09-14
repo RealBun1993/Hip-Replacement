@@ -5,4 +5,5 @@ numpy==1.21.0
 catboost==1.2.5
 joblib==1.4.2
 flask-cors==4.0.1
-setuptools>=74.0.0
+setuptools>=61.0.0
+distutils
