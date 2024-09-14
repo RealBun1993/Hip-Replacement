@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "api/generate_data.py", "use": "@vercel/python" },
-    { "src": "static/**/*", "use": "@vercel/static-build" }
+    { "src": "static/**/*", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/generate_data.py" },
