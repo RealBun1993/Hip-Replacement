@@ -1,25 +1,19 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/generate_data.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "static/**/*",
-      "use": "@vercel/static"
-    }
+    { "src": "api/generate_data.py", "use": "@vercel/python" },
+    { "src": "static/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/generate_data.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/static/index.html"
-    }
+    { "src": "/api/(.*)", "dest": "api/generate_data.py" },
+    { "src": "/(.*)", "dest": "/static/index.html" }
   ],
-  // 添加这一行注释以触发重新构建
-  "comment": "Force clear cache and rebuild"
+  "build": {
+    "env": {
+      "VERCEL_PYTHON_VERSION": "3.12"
+    },
+    "scripts": {
+      "build": "pip install --upgrade pip setuptools"
+    }
+  }
 }
