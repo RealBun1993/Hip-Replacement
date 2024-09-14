@@ -5,5 +5,6 @@ numpy==1.21.0
 catboost==1.2.5
 joblib==1.4.2
 flask-cors==4.0.1
-setuptools>=61.0.0
-distutils
+setuptools>=65.5.0  # 更新 setuptools
+wheel                # 确保安装 wheel
+
