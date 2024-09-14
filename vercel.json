@@ -2,30 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/generate_data.py",  // 替换为你的 Python 文件路径
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.12"
-      }
-    },
-    {
-      "src": "static/**/*",  // 如果你有静态文件
-      "use": "@vercel/static"
+      "src": "api/*.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/generate_data.py"  // 替换为你的 Python 文件路径
+      "src": "/(.*)",
+      "dest": "/api/generate_data.py"
     }
   ],
-  "engines": {
-    "python": "3.12"  // 确保使用 Python 3.12
-  },
-  "framework": "flask",  // 如果你使用 Flask 框架
   "functions": {
-    "api/*": {
-      "runtime": "python3.12"
+    "api/*.py": {
+      "runtime": "python@3.12"
     }
-  }
+  },
+  "buildCommand": "bash build.sh"
 }
+
