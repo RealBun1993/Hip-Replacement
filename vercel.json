@@ -4,12 +4,20 @@
     {
       "src": "api/*.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "static/index.html",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "/api/generate_data.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/static/index.html"
     }
   ],
   "functions": {
@@ -19,4 +27,5 @@
   },
   "buildCommand": "bash build.sh"
 }
+
 
