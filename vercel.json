@@ -7,8 +7,8 @@
       "config": { "runtime": "python3.8" }
     },
     {
-      "src": "static/index.html",
-      "use": "@vercel/static-build"
+      "src": "static/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
