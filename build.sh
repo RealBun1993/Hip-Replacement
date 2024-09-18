@@ -1,4 +1,8 @@
 #!/bin/bash
-pip install setuptools==65.5.0 wheel
-pip install --no-cache-dir -r requirements.txt
 
+# Ensure the required dependencies are installed
+pip install --upgrade pip
+pip install setuptools wheel
+
+# Install the rest of the dependencies
+pip install -r requirements.txt
