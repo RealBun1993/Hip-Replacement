@@ -7,4 +7,3 @@ joblib==1.4.2
 flask-cors==4.0.1
 setuptools>=65.0.0
 wheel>=0.36.0
-distlib==0.3.6
