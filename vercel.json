@@ -3,12 +3,11 @@
   "builds": [
     {
       "src": "api/*.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.8" }
+      "use": "@vercel/python"
     },
     {
-      "src": "static/**",
-      "use": "@vercel/static"
+      "src": "static/index.html",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -20,5 +19,10 @@
       "src": "/(.*)",
       "dest": "/static/index.html"
     }
-  ]
+  ],
+  "functions": {
+    "api/*.py": {
+      "runtime": "python@3.8"
+    }
+  }
 }
