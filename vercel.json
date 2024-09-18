@@ -25,6 +25,6 @@
       "runtime": "python@3.12"
     }
   },
-  "installCommand": "pip install --upgrade setuptools wheel && apt-get update && apt-get install -y python3-distutils",
+  "installCommand": "pip install --upgrade setuptools wheel distlib",
   "buildCommand": "bash build.sh"
 }
