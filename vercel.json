@@ -22,9 +22,9 @@
   ],
   "functions": {
     "api/*.py": {
-      "runtime": "python@3.8"
+      "runtime": "python@3.12"
     }
   },
-  "installCommand": "pip install --upgrade setuptools wheel distlib",
+  "installCommand": "python3 -m ensurepip && pip install --upgrade setuptools wheel",
   "buildCommand": "bash build.sh"
 }
