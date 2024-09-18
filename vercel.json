@@ -4,11 +4,11 @@
     {
       "src": "api/*.py",
       "use": "@vercel/python",
-      "config": { "runtime": "python3.8" }
+      "config": { "runtime": "python@3.8" }
     },
     {
-      "src": "static/**",
-      "use": "@vercel/static"
+      "src": "static/index.html",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -20,5 +20,11 @@
       "src": "/(.*)",
       "dest": "/static/index.html"
     }
-  ]
+  ],
+  "buildCommand": "pip install -r requirements.txt",
+  "functions": {
+    "api/*.py": {
+      "runtime": "python@3.8"
+    }
+  }
 }
