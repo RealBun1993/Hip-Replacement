@@ -1,18 +1,19 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/generate_data.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/static/index.html"
+      "src": "api/*.py",
+      "use": "@vercel/python"
     }
   ],
   "functions": {
     "api/*.py": {
       "runtime": "python@3.8"
+    }
+  },
+  "build": {
+    "env": {
+      "PYTHON_VERSION": "3.8"
     }
   }
 }
