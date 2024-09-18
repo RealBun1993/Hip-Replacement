@@ -24,7 +24,5 @@
     "api/*.py": {
       "runtime": "python@3.12"
     }
-  },
-  "installCommand": "python3 -m ensurepip && pip install --upgrade setuptools wheel",
-  "buildCommand": "bash build.sh"
+  }
 }
