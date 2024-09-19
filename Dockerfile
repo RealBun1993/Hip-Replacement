@@ -7,8 +7,9 @@ WORKDIR /app
 # 复制 requirements.txt 文件到工作目录
 COPY requirements.txt .
 
-# 安装 Python 依赖
-RUN pip install --no-cache-dir -r requirements.txt
+# 安装 Python 依赖和 distutils
+RUN apt-get update && apt-get install -y python3-distutils \
+    && pip install --no-cache-dir -r requirements.txt
 
 # 复制项目所有内容到工作目录
 COPY . .
