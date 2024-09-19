@@ -20,8 +20,12 @@
       "src": "/(.*)",
       "dest": "/static/index.html"
     }
+<<<<<<< HEAD
   ],
   "env": {
     "PYTHON_VERSION": "3.8"
   }
+=======
+  ]
+>>>>>>> df62c378496a714879fea115461c2f8537b36557
 }
