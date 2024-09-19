@@ -1,16 +1,18 @@
 #!/bin/bash
 
-# 确保 Python 和 pip 都安装了
-python3 -m ensurepip --upgrade || true
+# 创建虚拟环境
+python3 -m venv venv
+
+# 激活虚拟环境
+source venv/bin/activate
 
 # 升级 pip 到最新版本
-python3 -m pip install --upgrade pip
+pip install --upgrade pip
 
-# 卸载任何现有的 setuptools
-python3 -m pip uninstall -y setuptools
-
-# 安装指定版本的 setuptools 和 wheel，以及 six
-python3 -m pip install "setuptools==58.0.0" wheel six
+# 安装 setuptools 和 wheel 以及 six
+pip install "setuptools==58.0.0" wheel six
 
 # 安装项目依赖
-python3 -m pip install -r requirements.txt
+pip install -r requirements.txt
+
+# 继续执行其他步骤
