@@ -9,8 +9,8 @@ python3 -m pip install --upgrade pip
 # 卸载任何现有的 setuptools
 python3 -m pip uninstall -y setuptools
 
-# 安装 setuptools, wheel 和 six
-python3 -m pip install "setuptools==65.0.0" wheel six
+# 安装指定版本的 setuptools 和 wheel，以及 six
+python3 -m pip install "setuptools==58.0.0" wheel six
 
 # 安装项目依赖
 python3 -m pip install -r requirements.txt
