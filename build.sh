@@ -2,12 +2,13 @@
 
 set -ex  # 开启详细模式，输出所有命令和错误
 
-# 强制使用 Python 3.8 创建虚拟环境，如果有 python3.8 可用
+# 检查是否安装了 python3.8
 if command -v python3.8 &>/dev/null; then
+    echo "Using Python 3.8"
     python3.8 -m venv venv
 else
-    echo "Python 3.8 not found, using default python3"
-    python3 -m venv venv
+    echo "Error: Python 3.8 not found. Please ensure Python 3.8 is installed."
+    exit 1
 fi
 
 # 激活虚拟环境
@@ -18,12 +19,6 @@ pip install --upgrade pip
 
 # 安装 setuptools 和 wheel
 pip install setuptools==59.6.0 wheel
-
-# 手动安装 distutils
-pip install setuptools==59.6.0 wheel
-pip install --upgrade pip
-pip install wheel setuptools==59.6.0
-pip install distutils  # 尝试手动安装 distutils
 
 # 安装依赖的构建工具，如 Cython 和 numpy
 pip install Cython numpy
