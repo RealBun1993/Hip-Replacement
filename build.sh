@@ -19,8 +19,11 @@ pip install --upgrade pip
 # 安装 setuptools 和 wheel
 pip install setuptools==59.6.0 wheel
 
-# 安装 distutils，如果需要
-pip install distlib
+# 手动安装 distutils
+pip install setuptools==59.6.0 wheel
+pip install --upgrade pip
+pip install wheel setuptools==59.6.0
+pip install distutils  # 尝试手动安装 distutils
 
 # 安装依赖的构建工具，如 Cython 和 numpy
 pip install Cython numpy
