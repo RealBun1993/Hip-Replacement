@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/generate_data.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/static/index.html"
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/generate_data.py" },
+    { "src": "/(.*)", "dest": "/static/index.html" }
   ]
 }
