@@ -12,8 +12,5 @@ pip install --upgrade pip
 # 安装 setuptools 和 wheel
 pip install setuptools wheel
 
-# 手动安装 distutils
-pip install distutils
-
 # 安装项目依赖
 pip install -r requirements.txt
