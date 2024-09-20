@@ -1,7 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/**/*.py", "use": "@vercel/python", "config": { "quiet": true } },
+    { 
+      "src": "api/**/*.py", 
+      "use": "@vercel/python",
+      "config": {
+        "buildCommand": "pip install --quiet --disable-pip-version-check --no-warn-script-location --no-cache-dir --requirement requirements.txt"
+      }
+    },
     { "src": "static/index.html", "use": "@vercel/static" }
   ],
   "routes": [
